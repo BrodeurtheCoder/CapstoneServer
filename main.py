@@ -1,5 +1,4 @@
 import socket, sys, time    # Import socket module
-from serializer import serializer
 
 s = socket.socket()
 host = "0.0.0.0"
