@@ -4,6 +4,7 @@ s = socket.socket()
 host = "0.0.0.0"
 port = 2000
 
+s.bind((host, port))
 s.listen(5)
 
 while True:
