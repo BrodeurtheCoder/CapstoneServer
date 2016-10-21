@@ -1,0 +1,1 @@
+Server that receives and stores local environmental data for a senior design capstone
