@@ -20,4 +20,4 @@ while True:
 	#receivedMessage = c.recv(1024)
 	#print "receivedMessage: " + receivedMessage
 	received = c.recv(1024)
-	print "Server received ", %received
+	print "Server received ", received
