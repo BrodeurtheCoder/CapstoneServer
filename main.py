@@ -14,10 +14,9 @@ s.listen(5)
 
 #print "Messages received from pi sent as [time, data] \n"
 
-while True:
-	c, addr = s.accept()
-	print "Server accepted conncetion from node"
-	break
+
+while c, addr != s.accept()
+print "Server accepted conncetion from node"
 
 while True:
 	#receivedMessage = c.recv(1024)
