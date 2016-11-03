@@ -11,11 +11,12 @@ host = "0.0.0.0"
 port = 2000
 
 s.bind((host, port))
-s.listen(5)
+s.listen(1)
 
 #print "Messages received from pi sent as [time, data] \n"
 
 c, addr = s.accept()
+c.send("hello world")
 print "Server accepted conncetion from node"
 
 #while True:
@@ -30,10 +31,9 @@ print "Server accepted conncetion from node"
 #c.close()
 
 while True:
-	#c, addr = s.accept()
 	data = c.recv(1024)
-	if data:
-		print "received"
-		c.send(data)
+	print "received data: ", data
+	if data == "quit":
+		break
 
 c.close()
