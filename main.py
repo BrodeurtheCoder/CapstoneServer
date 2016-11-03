@@ -16,7 +16,10 @@ s.listen(5)
 
 while True:
 	c, addr = s.accept()
+	print "Server accepted conncetion from node"
+	break
 
+while True:
 	#receivedMessage = c.recv(1024)
 	#print "receivedMessage: " + receivedMessage
 	received = c.recv(1024)
