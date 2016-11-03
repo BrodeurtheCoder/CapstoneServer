@@ -18,13 +18,22 @@ s.listen(5)
 c, addr = s.accept()
 print "Server accepted conncetion from node"
 
+#while True:
+#	print "in while loop looking to receive"
+#	#receivedMessage = c.recv(1024)
+#	#print "receivedMessage: " + receivedMessage
+#	received = c.recv(1024)
+#	print "Server received ", received
+#	if c.recv(1024) == "quit":
+#		break
+#s.close()
+#c.close()
+
 while True:
-	print "in while loop looking to receive"
-	#receivedMessage = c.recv(1024)
-	#print "receivedMessage: " + receivedMessage
-	received = c.recv(1024)
-	print "Server received ", received
-	if received == "quit":
-		break
-s.close()
+	#c, addr = s.accept()
+	data = c.recv(1024)
+	if data:
+		print "received"
+		c.send(data)
+
 c.close()
